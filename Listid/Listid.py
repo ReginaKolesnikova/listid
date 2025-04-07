@@ -49,21 +49,12 @@ while True:
        else:
            print("wrong number")
   elif valik==5: #find first encounter
-      stirt=input("hn")
-      nd=input("ddd")
-      ngd=input("ddd")
-      slovo_list.find(stirt,nd)
-      print(slovo_list)
-
-  # elif valik==6:
-
-  # # S.find(str, [start],[end])
-  #   a=input("uuu")
-  #   i=int(input(": "))
-  #   slovo_list.insert(i-1,a) #0,1,2...
-  #   print(slovo_list)
-
-
+      stirt=input("enter letter ")
+      txt = "Programmeerimine"
+      x = txt.find(stirt, 0, 15)
+      print(x)
+  elif valik==6:
+    
   # elif valik==7:
   # elif valik==8:
   # elif valik==9:
