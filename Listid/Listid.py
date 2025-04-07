@@ -55,29 +55,61 @@ while True:
   elif valik==5: #find first encounter
       print ("You chose 5-th operation. It is used to find first encounter of certain letter in word Programmeerimine.")
       stirt=input("Enter letter you want to find: ")
-      x = slovo.find(stirt, 0, 15)
-      print(x)
+      a = slovo.find(stirt, 0, 15)
+      print(a)
   elif valik==6: #split list by symbol
      print ("You chose 6-th operation. It is used to split word Programmeerimine to list on positions of certain symbol.")
      stirt=input("Enter letter which you want to use as splitter: ")
-     x = slovo.split(stirt)
-     print(x)
+     a = slovo.split(stirt)
+     print(a)
   elif valik==7: #find out whether there is only letters in string or not
+  # add chance to make list false by inputting another symbol
     print ("You chose 7-th operation. It is used to find out whether there is only letters in string or not.")
     slovo="Programmeerimine"
-    x = slovo.isalpha()
-    print(f"It is",x,"that in",slovo,"used only letters")
+    a = slovo.isalpha()
+    print(f"It is",a,"that in",slovo,"used only letters")
   elif valik==8: #makes all letters in caps
-     print ("You chose 8-th operation. It is used to make all letters in list:abc capital.")
-     abc="'Abc','A','B','C'"
-     x = abc.upper()
-     print(x)
-  elif valik==9:
-  # elif valik==10:
-  # else:
-  #    print("There is no such letter, try enter again")
-  # print(slovo_list)
+     print ("You chose 8-th operation. It is used to make all letters in (phrase to test function) capital.")
+     phrs="phrase to test function"
+     a = phrs.upper()
+     print(a)
+  elif valik==9: #captalize only first leter of word in string
+     print ("You chose 9-th operation. It is used to captalize only first leter in a sentence (phrase to test function).")
+     phrs="phrase to test function"
+     a = phrs.capitalize()
+     print(a)
+  elif valik==10: #captalize only first leter of word in string
+     print ("You chose 10-th operation. It is used to swap uppercase letters with lowercase ones in a sentence (phRAse TO teST fuNCtiON).")
+     phrs="phRAse TO teST fuNCtiON"
+     a = phrs.swapcase()
+     print(a)    
+  else:
+    print("There is no such operation, try to chose again")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #https://stackoverflow.com/questions/40410256/python-error-list-object-has-no-attribute-upper
 
 
   # valik=int(input())
