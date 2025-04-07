@@ -1,6 +1,6 @@
 spisok=[] #pustoy spisok 
 numbers=[1,2,3,4,5]
-abc=['Abc','B','C']
+abc=['Abc','A','B','C']
 slovo="Programmeerimine"
 slovo_list=list(slovo)
 
@@ -9,7 +9,7 @@ slovo_list=list(slovo)
 # print(slovo_list)
 
 while True:
-  print(f"\n \nLists: \nnumbers=[1,2,3,4,5] \nabc=['Abc','B','C'], \nslovo=",slovo_list)
+  print(f"\n \nLists: \nnumbers=[1,2,3,4,5] \nabc=['Abc','A','B','C'] \nslovo=",slovo_list)
   print("1 - repeat string\n2 - find letter by i- position") #s1 3 #s i
   print("3 - get certain part of list \n4 - show string length") #s i j step # len s
   print("5 - find first encounter\n6 - split list with symbol") #s find str start end # s split
@@ -32,7 +32,7 @@ while True:
     n=slovo_list[a]
     print (f"On position {a} located letter:", n)
   elif valik==3: #get certain part of list
-    print ("You chose 3-rd operation. It is used to get certain part of list. You must enter first encounter, last encounter and step length")
+    print ("You chose 3-rd operation. It is used to get certain part of list. You must enter first encounter, last encounter and step length. List:slovo")
     a=int(input("Enter first encounter (0-15): "))
     b=int(input("Enter last encounter (0-15): "))
     c=int(input("Enter step length (0,1,2...)"))
@@ -53,18 +53,26 @@ while True:
        else:
            print("wrong number")
   elif valik==5: #find first encounter
-      stirt=input("enter letter ")
+      print ("You chose 5-th operation. It is used to find first encounter of certain letter in word Programmeerimine.")
+      stirt=input("Enter letter you want to find: ")
       x = slovo.find(stirt, 0, 15)
       print(x)
-  elif valik==6:
-    stirt=input("letter to split ")
-    x = slovo.split(stirt)
-    print(x)
-
-
-  # elif valik==7:
-  # elif valik==8:
-  # elif valik==9:
+  elif valik==6: #split list by symbol
+     print ("You chose 6-th operation. It is used to split word Programmeerimine to list on positions of certain symbol.")
+     stirt=input("Enter letter which you want to use as splitter: ")
+     x = slovo.split(stirt)
+     print(x)
+  elif valik==7: #find out whether there is only letters in string or not
+    print ("You chose 7-th operation. It is used to find out whether there is only letters in string or not.")
+    slovo="Programmeerimine"
+    x = slovo.isalpha()
+    print(f"It is",x,"that in",slovo,"used only letters")
+  elif valik==8: #makes all letters in caps
+     print ("You chose 8-th operation. It is used to make all letters in list:abc capital.")
+     abc="'Abc','A','B','C'"
+     x = abc.upper()
+     print(x)
+  elif valik==9:
   # elif valik==10:
   # else:
   #    print("There is no such letter, try enter again")
