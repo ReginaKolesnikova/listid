@@ -3,58 +3,65 @@ numbers=[1,2,3,4,5]
 abc=['Abc','B','C']
 slovo="Programmeerimine"
 slovo_list=list(slovo)
-abc_list=list(abc)
-numbers_list=list(numbers)
+
 
 # print(slovo)
 # print(slovo_list)
 
 while True:
-  print("1-repeat string\n2-find letter by i- position") #s1 3 #s i
-  print("3-get certain part of list \n4-show string length") #s i j step # len s
-  print("5-find first encounter\n6-split list with symbol") #s find str start end # s split
-  print("7-find out whether there is only letters in string or not \n8-makes caps letters") # s isalpha # s upper
-  print("9-captalize only first leter of word in string\n10-swap uppercase letters with lowercase ones ") # s capitalize # s swapcase
+  print(f"\n \nLists: \nnumbers=[1,2,3,4,5] \nabc=['Abc','B','C'], \nslovo=",slovo_list)
+  print("1 - repeat string\n2 - find letter by i- position") #s1 3 #s i
+  print("3 - get certain part of list \n4 - show string length") #s i j step # len s
+  print("5 - find first encounter\n6 - split list with symbol") #s find str start end # s split
+  print("7 - find out whether there is only letters in string or not \n8 - makes caps letters") # s isalpha # s upper
+  print("9 - captalize only first leter of word in string\n10 - swap uppercase letters with lowercase ones\n \n") # s capitalize # s swapcase
 
 
   #S-spisok
   #i-position
-  
+ 
   valik=int(input("Choose operation: "))
   if valik==1: #repeat string
-      a=int(input("How much repeats: "))
-      repe=numbers_list*a
+      print ("You chose 1-st operation. It is used to repeat list:numbers.")
+      a=int(input("How much repeats do you want: "))
+      repe=numbers*a
       print (f"Repeated {a} times: ", repe)
   elif valik==2: #find letter by i- position
-    a=int(input("Enter position number (0,1,2,3,4...): "))
+    print ("You chose 2-nd operation. It is used to find letter by its position in list:slovo.")
+    a=int(input("Enter position number (0-15): "))
     n=slovo_list[a]
-    print(n)
+    print (f"On position {a} located letter:", n)
   elif valik==3: #get certain part of list
-    a=int(input("Enter first position (0,1,2,3...): "))
-    b=int(input("Enter last position (0,1,2,3...): "))
-    c=int(input("Enter step length (0,1,2,3...)"))
+    print ("You chose 3-rd operation. It is used to get certain part of list. You must enter first encounter, last encounter and step length")
+    a=int(input("Enter first encounter (0-15): "))
+    b=int(input("Enter last encounter (0-15): "))
+    c=int(input("Enter step length (0,1,2...)"))
     n=slovo_list[a:b:c]
     print(n)
   elif valik==4: #show string length
+       print ("You chose 4-th operation. It is used to show length of certain list.")
        a=int(input("Choose list to count its length (1-word, 2-letters or 3-numbers): "))
        if a==1:
           b=len(slovo_list)
           print(f"In list {slovo_list} - {b} symbols")
        elif a==2:
-          b=len(abc_list)
-          print(f"In list {abc_list} - {b} symbols")
+          b=len(abc)
+          print(f"In list {abc} - {b} symbols")
        elif a==3:
-          b=len(numbers_list)
-          print(f"In list {numbers_list} - {b} symbols")
+          b=len(numbers)
+          print(f"In list {numbers} - {b} symbols")
        else:
            print("wrong number")
   elif valik==5: #find first encounter
       stirt=input("enter letter ")
-      txt = "Programmeerimine"
-      x = txt.find(stirt, 0, 15)
+      x = slovo.find(stirt, 0, 15)
       print(x)
   elif valik==6:
-    
+    stirt=input("letter to split ")
+    x = slovo.split(stirt)
+    print(x)
+
+
   # elif valik==7:
   # elif valik==8:
   # elif valik==9:
